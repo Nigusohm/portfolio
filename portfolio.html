@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nigus — Mobile App Developer (Flutter)</title>
+  <style>
+    :root{
+      --bg:#0f1724; /* deep blue */
+      --card:#0b1220;
+      --accent:#1e90ff;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; background:linear-gradient(180deg,#071428 0%,var(--bg) 60%); color:#e6eef8}
+    a{color:var(--accent); text-decoration:none}
+    .container{max-width:1000px; margin:40px auto; padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3ab0ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021123}
+    h1{margin:0;font-size:22px}
+    .role{font-size:13px;color:var(--muted);margin-top:4px}
+
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:10px;font-size:14px}
+    nav a:hover{background:var(--glass)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:26px;margin-top:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:18px; box-shadow: 0 6px 20px rgba(2,6,23,0.6);}
+    .intro h2{margin:0 0 8px 0;font-size:20px}
+    .intro p{margin:0;color:var(--muted);line-height:1.5}
+    .cta{margin-top:14px;display:flex;gap:10px}
+    .btn{background:var(--accent);color:#021123;padding:9px 14px;border-radius:10px;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .profile{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .avatar{width:160px;height:160px;border-radius:18px;background:linear-gradient(135deg,#063b67,#0b2540);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:700;color:var(--accent)}
+    .contact{width:100%;text-align:center;color:var(--muted);font-size:14px}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+
+    .skills-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted)}
+
+    .projects{margin-top:22px}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));}
+    .project h3{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .links{margin-top:10px;display:flex;gap:8px}
+    .pill{padding:6px 8px;border-radius:8px;font-size:13px;background:rgba(255,255,255,0.02)}
+
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .inline{display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NH</div>
+        <div>
+          <h1>Nigus</h1>
+          <div class="role">Mobile App Developer (Flutter)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h2>Hi — I’m Nigus</h2>
+        <p>I build clean, reliable mobile apps using Flutter and maintain strong fundamentals in Java, Linux, and software engineering principles. Currently studying Software Engineering at Adama Science and Technology University. I focus on delivering practical apps that solve real problems.</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn ghost" href="mailto:nigushagos1995@gmail.com">Email me</a>
+        </div>
+
+        <div style="margin-top:18px">
+          <strong class="muted">Quick facts</strong>
+          <div class="skills-list">
+            <div class="skill">Dart</div>
+            <div class="skill">Flutter</div>
+            <div class="skill">Java</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Git / GitHub</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Problem solving</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar">N</div>
+        <div style="text-align:center">
+          <div style="font-weight:700">Nigus</div>
+          <div class="muted" style="font-size:13px">Mobile App Developer — Flutter</div>
+        </div>
+        <div class="contact">
+          <div><a href="mailto:nigushagos1995@gmail.com">nigushagos1995@gmail.com</a></div>
+          <div style="margin-top:6px"><a href="https://github.com/Nigusohm" target="_blank">github.com/Nigusohm</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="card" style="margin-top:20px">
+      <h2 style="margin-top:0">About</h2>
+      <p class="muted">Short & professional — I am a software engineering student and Flutter developer who enjoys building useful mobile apps. I focus on clean UI, maintainable code, and practical features that people use. I am available for small freelance projects and collaborations.</p>
+    </section>
+
+    <div class="grid-2">
+      <section id="skills" class="card">
+        <h3 style="margin-top:0">Skills</h3>
+        <p class="muted">Technologies and strengths I use regularly.</p>
+        <div style="margin-top:12px">
+          <div style="margin-bottom:8px"><strong>Dart & Flutter</strong><div class="muted" style="font-size:13px">Building cross-platform mobile apps, UI composition, state management (Provider/Riverpod basics)</div></div>
+          <div style="margin-bottom:8px"><strong>Java</strong><div class="muted" style="font-size:13px">Object-oriented programming, data structures, algorithms basics</div></div>
+          <div style="margin-bottom:8px"><strong>HTML & CSS</strong><div class="muted" style="font-size:13px">Responsive layouts, modern CSS (Flexbox and Grid)</div></div>
+          <div style="margin-bottom:8px"><strong>Git / GitHub</strong><div class="muted" style="font-size:13px">Version control, project hosting</div></div>
+          <div style="margin-bottom:8px"><strong>Linux</strong><div class="muted" style="font-size:13px">Development environment and basic shell</div></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 style="margin-top:0">Work style</h3>
+        <p class="muted">I prefer clear, simple interfaces and readable code. I write small, testable modules and use GitHub to track progress. I aim for projects that are useful locally — like tools for small businesses or campus management systems.</p>
+        <div style="margin-top:12px">
+          <strong>Availability</strong>
+          <p class="muted" style="margin:6px 0">Open to small freelance work and university collaborations.</p>
+        </div>
+      </section>
+    </div>
+
+    <section id="projects" class="projects">
+      <h2 style="margin-bottom:6px">Projects</h2>
+      <p class="muted">A selection of recent projects — real ones first, small extras after.</p>
+
+      <div class="projects-grid" style="margin-top:12px">
+        <div class="project">
+          <h3>Discount Promoter Web</h3>
+          <p class="muted">A small web dashboard for creating and scheduling discount promos for local businesses. Built with a frontend for admins and simple CSV import/export for offers.</p>
+          <div class="links">
+            <a class="pill" href="https://github.com/Nigusohm/discount-promoter-web" target="_blank">View code</a>
+            <a class="pill" href="#">Live (placeholder)</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Task manager App (Mobile)</h3>
+          <p class="muted">A lightweight social feed app prototype built in Flutter — posting, image placeholder support, and follow/unfollow flow. Focused on clean mobile UI.</p>
+          <div class="links">
+            <a class="pill" href="https://github.com/Nigusohm/social-media-app" target="_blank">View code</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>calculator app</h3>
+          <p class="muted">A Flutter app to track daily expenses, categories, and monthly summaries. Local storage using SQLite and simple charts for monthly spending.</p>
+          <div class="links">
+            <a class="pill" href="https://github.com/Nigusohm/expense-tracker" target="_blank">View code</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>digital atendance</h3>
+          <p class="muted">A campus-oriented LMS prototype: course content, simple quiz engine, and assignment uploads. Intended for use in small campus labs and study groups.</p>
+          <div class="links">
+            <a class="pill" href="https://github.com/Nigusohm/learning-management" target="_blank">View code</a>
+          </div>
+        </div>
+
+        <!-- small extras -->
+        <div class="project">
+          <h3>java calculator</h3>
+          <p class="muted">Simple to-do list with local persistence. Good for demonstrating state handling and neat UI.</p>
+          <div class="links"><a class="pill" href="https://github.com/Nigusohm/todo-app" target="_blank">View code</a></div>
+        </div>
+
+        <div class="project">
+          <h3>Note nook</h3>
+          <p class="muted">Small demo that consumes a public API to show current weather and 3-day forecast (demo mode: API key removed).</p>
+          <div class="links"><a class="pill" href="https://github.com/Nigusohm/weather-app" target="_blank">View code</a></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2 style="margin-top:0">Contact</h2>
+      <p class="muted">Email or GitHub is the best way to reach me.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn" href="mailto:nigushagos1995@gmail.com">Email: nigushagos1995@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/Nigusohm" target="_blank">GitHub: @Nigusohm</a>
+      </div>
+    </section>
+
+    <footer>
+      Built by Nigus • Mobile App Developer (Flutter) • ASTU
+    </footer>
+  </div>
+
+  <script>
+    // Small helper: smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
